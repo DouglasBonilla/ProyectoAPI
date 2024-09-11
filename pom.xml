@@ -64,8 +64,6 @@
 		<!--fin de dependecias agrgadas con el proyecto inicial-->
 
 		<!--Dependecias agrgadas adicionales con el proyecto-->
-
-		<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
