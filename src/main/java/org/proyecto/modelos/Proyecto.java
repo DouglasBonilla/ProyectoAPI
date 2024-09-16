@@ -7,6 +7,8 @@ import org.proyecto.servicios.implementaciones.CategoriaService;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -27,4 +29,7 @@ public class Proyecto {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+
+    @OneToMany(mappedBy = "proyecto")
+    private List<Tarea> tareas;
 }
