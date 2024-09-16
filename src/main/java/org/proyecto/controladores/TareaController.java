@@ -76,8 +76,9 @@ public class TareaController {
     }
 
     @PatchMapping
-    public ResponseEntity<TareaSalida> cambiarEstado( @RequestBody TareaCambiarEstado tareaCambiarEstado){
+    public ResponseEntity<TareaSalida> cambiarEstado(@RequestBody TareaCambiarEstado tareaCambiarEstado) {
         TareaSalida tarea = tareaService.cambiarEstado(tareaCambiarEstado);
+
         if (tarea != null)
             return ResponseEntity.ok(tarea);
 

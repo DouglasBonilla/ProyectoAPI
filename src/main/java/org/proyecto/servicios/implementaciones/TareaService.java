@@ -77,7 +77,7 @@ public class TareaService implements ITareaService {
     public TareaSalida cambiarEstado(TareaCambiarEstado tareaCambiarEstado) {
         Tarea tarea = tareaRepository.findById(tareaCambiarEstado.getId()).get();
         tarea.setEstado(Tarea.Status.valueOf(tareaCambiarEstado.getNombre()));
-        return modelMapper.map(tarea, TareaSalida.class);
+        return modelMapper.map(tareaRepository.save(tarea), TareaSalida.class);
     }
 
     @Override
